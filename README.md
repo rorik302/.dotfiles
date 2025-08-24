@@ -4,3 +4,9 @@
 
 - neovim
 - git
+- fish
+- ghostty
+- hyprland
+- sddm
+- uwsm
+- yazi
