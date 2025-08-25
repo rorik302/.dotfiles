@@ -11,3 +11,7 @@
 - uwsm
 - yazi
 - lazygit
+
+
+## Aur packages
+- yandex-browser
