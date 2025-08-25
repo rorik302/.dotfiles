@@ -10,3 +10,4 @@
 - sddm
 - uwsm
 - yazi
+- lazygit
