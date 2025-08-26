@@ -11,6 +11,12 @@
 - uwsm
 - yazi
 - lazygit
+- wl-clipboard
+- nodejs
+- tree-sitter-cli
+- go
+- libgit2
+- unzip
 
 
 ## Aur packages
