@@ -4,6 +4,7 @@
 
 - neovim
 - git
+- git-delta
 - fish
 - ghostty
 - hyprland
