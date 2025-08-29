@@ -18,6 +18,7 @@
 - go
 - libgit2
 - unzip
+- zoxide
 
 
 ## Aur packages
