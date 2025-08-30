@@ -19,6 +19,7 @@
 - libgit2
 - unzip
 - zoxide
+- openssh
 
 
 ## Aur packages
