@@ -20,6 +20,10 @@
 - unzip
 - zoxide
 - openssh
+- fzf
+- bat
+- fd
+- eza
 
 
 ## Aur packages
