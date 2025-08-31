@@ -27,4 +27,5 @@
 
 
 ## Aur packages
+- wl-kbptr
 - yandex-browser
