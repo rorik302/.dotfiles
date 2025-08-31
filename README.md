@@ -24,8 +24,10 @@
 - bat
 - fd
 - eza
+- swww
 
 
 ## Aur packages
 - wl-kbptr
 - yandex-browser
+- waypaper
