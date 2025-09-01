@@ -25,6 +25,7 @@
 - fd
 - eza
 - swww
+- rofi
 
 
 ## Aur packages
