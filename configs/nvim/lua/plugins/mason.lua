@@ -16,6 +16,10 @@ return {
 				"stylua",
 
 				"hyprls",
+
+				"basedpyright",
+				"ruff",
+				"mypy",
 			},
 		})
 	end,
