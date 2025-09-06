@@ -1,0 +1,8 @@
+gui:
+  language: "en"
+
+git:
+  paging:
+    pager: "delta"
+
+confirmOnQuit: true
