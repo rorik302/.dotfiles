@@ -32,3 +32,7 @@
 - wl-kbptr
 - yandex-browser
 - waypaper
+
+## Hyprland plugins
+Hyprspace
+hyprplugins - hyprfocus
