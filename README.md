@@ -26,6 +26,8 @@
 - eza
 - swww
 - rofi
+- cpio
+- cmake
 
 
 ## Aur packages
