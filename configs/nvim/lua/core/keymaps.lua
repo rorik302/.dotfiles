@@ -3,7 +3,9 @@ vim.keymap.set("n", "<Esc>", ":nohlsearch<CR>", { silent = true, desc = "Clear s
 vim.keymap.set("n", "<leader>Q", vim.diagnostic.setloclist, { desc = "Open Quickfix list" })
 
 vim.keymap.set("n", "<leader>w", ":write<CR>", { silent = true, desc = "Nvim: Save" })
-vim.keymap.set("n", "<leader>q", ":quit<CR>", { silent = true, desc = "Nvim: Quit" })
+vim.keymap.set("n", "<leader>q", ":quitall<CR>", { silent = true, desc = "Nvim: Quit" })
+
+vim.keymap.set("n", "<leader>bx", ":BufferClose<CR>", { silent = true, desc = "Buffer: Close" })
 
 vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Window: Move focus to the left" })
 vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Window: Move focus to the bottom" })
