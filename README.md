@@ -31,6 +31,7 @@
 - trash-cli
 - glow
 - hypridle
+- hyprsunset
 
 
 ## Aur packages
