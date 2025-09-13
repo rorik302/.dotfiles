@@ -38,10 +38,6 @@
 - yandex-browser
 - waypaper
 
-## Hyprland plugins
-- Hyprspace
-- hyprplugins - hyprfocus
-
 ## Yazi plugins/flavors
 - mount - ya pkg add yazi-rs/plugins:mount
 - chmod - ya pkg add yazi-rs/plugins:chmod
