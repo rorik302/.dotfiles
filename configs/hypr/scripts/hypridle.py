@@ -13,7 +13,7 @@ args = parser.parse_args()
 if args.action == "brightness_off":
     current_brightness = get_current_brightness()
     save_to_file(f"{HOME_DIR}/.local/state/.brightness", str(current_brightness))
-    set_brightness(0)
+    set_brightness(20)
 
 
 if args.action == "brightness_restore":
