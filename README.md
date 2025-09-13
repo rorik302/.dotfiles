@@ -30,6 +30,7 @@
 - cmake
 - trash-cli
 - glow
+- hypridle
 
 
 ## Aur packages
