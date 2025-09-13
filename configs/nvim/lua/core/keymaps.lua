@@ -7,6 +7,11 @@ vim.keymap.set("n", "<leader>q", ":quitall<CR>", { silent = true, desc = "Nvim: 
 
 vim.keymap.set("n", "<leader>bx", ":BufferClose<CR>", { silent = true, desc = "Buffer: Close" })
 
+vim.keymap.set("n", "<C-Down>", ":resize +2<CR>", { desc = "Window: Increase horizontal", silent = true })
+vim.keymap.set("n", "<C-Up>", ":resize -2<CR>", { desc = "Window: Descrease horizontal", silent = true })
+vim.keymap.set("n", "<C-Left>", ":vertical resize -2<CR>", { desc = "Window: Descrease vertical", silent = true })
+vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>", { desc = "Window: Increase vertical", silent = true })
+
 vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Window: Move focus to the left" })
 vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Window: Move focus to the bottom" })
 vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Window: Move focus to the top" })

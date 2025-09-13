@@ -4,7 +4,7 @@ return {
 		require("toggleterm").setup({})
 
 		vim.keymap.set("n", "<leader>tt", ":ToggleTerm<CR>", { desc = "ToggleTerm: Toggle Terminal", silent = true })
-		vim.keymap.set("n", "<leader>tn", ":TermNew", { desc = "ToggleTerm: New Terminal" })
+		vim.keymap.set("n", "<leader>tn", ":TermNew<CR>", { desc = "ToggleTerm: New Terminal", silent = true })
 		vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Set normal mode in terminal" })
 
 		local Terminal = require("toggleterm.terminal").Terminal
