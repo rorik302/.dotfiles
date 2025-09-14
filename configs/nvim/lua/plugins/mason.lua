@@ -15,8 +15,6 @@ return {
 				"selene",
 				"stylua",
 
-				"hyprls",
-
 				"basedpyright",
 				"ruff",
 				"mypy",

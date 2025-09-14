@@ -23,7 +23,6 @@ return {
 			"html",
 			"htmldjango",
 			"http",
-			"hyprlang",
 			"javascript",
 			"jinja",
 			"jinja_inline",

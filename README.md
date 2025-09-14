@@ -7,9 +7,8 @@
 - git-delta
 - fish
 - ghostty
-- hyprland
-- sddm
-- uwsm
+- niri
+- ly
 - yazi
 - lazygit
 - wl-clipboard
@@ -30,17 +29,12 @@
 - cmake
 - trash-cli
 - glow
-- hypridle
-- hyprsunset
 
 
 ## Aur packages
 - wl-kbptr
 - yandex-browser
 - waypaper
-
-## Hyprland plugins
-- hyprtasking
 
 ## Yazi plugins/flavors
 - mount - ya pkg add yazi-rs/plugins:mount
