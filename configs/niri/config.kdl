@@ -64,6 +64,19 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 window-rule {
     geometry-corner-radius 4
     clip-to-geometry true
+
+    opacity 0.9
+}
+
+window-rule {
+    match title=r#"^(.* - YouTube|Сериал.*смотреть онлайн.*|.*\| Tape Operator)$"#
+
+    open-floating true
+    open-focused false
+    opacity 1.0
+    default-column-width { proportion 0.3; }
+    default-window-height { proportion 0.3; }
+    default-floating-position x=0 y=0 relative-to="bottom-right"
 }
 
 binds {
@@ -132,8 +145,8 @@ binds {
     Mod+C { center-column; }
     Mod+Ctrl+C { center-visible-columns; }
 
-    Mod+Shift+H { set-column-width "-10%"; }
-    Mod+Shift+L { set-column-width "+10%"; }
+    Mod+Shift+H { set-column-width "-5%"; }
+    Mod+Shift+L { set-column-width "+5%"; }
     Mod+Shift+K { set-window-height "-10%"; }
     Mod+Shift+J { set-window-height "+10%"; }
 
