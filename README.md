@@ -36,6 +36,7 @@
 - wl-kbptr
 - yandex-browser
 - waypaper
+- niri-float-sticky
 
 ## Yazi plugins/flavors
 - mount - ya pkg add yazi-rs/plugins:mount

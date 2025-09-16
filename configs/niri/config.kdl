@@ -48,6 +48,7 @@ layout {
 }
 
 spawn-at-startup "swww-daemon"
+spawn-at-startup "niri-float-sticky"
 
 hotkey-overlay {
     skip-at-startup
