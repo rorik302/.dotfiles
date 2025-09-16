@@ -29,6 +29,7 @@
 - cmake
 - trash-cli
 - glow
+- bluetui
 
 
 ## Aur packages
