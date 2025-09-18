@@ -30,6 +30,7 @@
 - trash-cli
 - glow
 - bluetui
+- telegram-desktop
 
 
 ## Aur packages
