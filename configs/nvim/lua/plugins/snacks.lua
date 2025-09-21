@@ -1,3 +1,12 @@
+local function term_nav(key)
+	---@param self snacks.terminal
+	return function(self)
+		return self:is_floating() and "<C-" .. key .. ">" or vim.schedule(function()
+			vim.cmd.wincmd(key)
+		end)
+	end
+end
+
 return {
 	"folke/snacks.nvim",
 	dependencies = {
@@ -15,6 +24,16 @@ return {
 		input = { enabled = true },
 		notifier = { enabled = true, timeout = 3000 },
 		picker = { enabled = true },
+		terminal = {
+			win = {
+				keys = {
+					nav_h = { "<C-h>", term_nav("h"), desc = "Go to Left Window", expr = true, mode = "t" },
+					nav_j = { "<C-j>", term_nav("j"), desc = "Go to Lower Window", expr = true, mode = "t" },
+					nav_k = { "<C-k>", term_nav("k"), desc = "Go to Upper Window", expr = true, mode = "t" },
+					nav_l = { "<C-l>", term_nav("l"), desc = "Go to Right Window", expr = true, mode = "t" },
+				},
+			},
+		},
 	},
 	config = function(_, opts)
 		local snacks = require("snacks")
@@ -35,5 +54,8 @@ return {
 		vim.keymap.set("n", "<leader>fN", snacks.picker.notifications, { desc = "Snacks: Open Notifications" })
 		vim.keymap.set("n", "<leader>fn", snacks.notifier.show_history, { desc = "Snacks: Notifications History" })
 		vim.keymap.set("n", "<leader>fu", snacks.picker.undo, { desc = "Snacks: Undo History" })
+
+		vim.keymap.set("n", "<leader>tt", snacks.terminal.toggle, { desc = "Snacks: Toggle Terminal" })
+		vim.keymap.set("n", "<leader>to", snacks.terminal.open, { desc = "Snacks: Open Terminal" })
 	end,
 }
