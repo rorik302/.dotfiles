@@ -1,6 +1,7 @@
 vim.keymap.set("", "<Space>", "<Nop>", { silent = true, noremap = true })
 vim.keymap.set("n", "<Esc>", ":nohlsearch<CR>", { silent = true, desc = "Clear search highlight" })
 vim.keymap.set("n", "<leader>Q", vim.diagnostic.setloclist, { desc = "Open Quickfix list" })
+vim.keymap.set("n", "<leader>dd", vim.diagnostic.open_float, { desc = "Open Diagnostic Float Window" })
 
 vim.keymap.set("n", "<leader>w", ":write<CR>", { silent = true, desc = "Nvim: Save" })
 vim.keymap.set("n", "<leader>q", ":quitall<CR>", { silent = true, desc = "Nvim: Quit" })
