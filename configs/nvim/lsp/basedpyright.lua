@@ -8,4 +8,12 @@ return {
 		"setup.cfg",
 		".git",
 	},
+	settings = {
+		basedpyright = {
+			analysis = {
+				autoSearchPath = true,
+				typeCheckingMode = "standard",
+			},
+		},
+	},
 }
