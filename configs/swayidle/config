@@ -1,0 +1,1 @@
+timeout 120 "python ~/.config/scripts/brightness_timeout_idle.py --brightness 0 --contrast 20" resume "python ~/.config/scripts/brightness_restore.py"

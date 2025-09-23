@@ -49,6 +49,7 @@ layout {
 
 spawn-at-startup "swww-daemon"
 spawn-at-startup "niri-float-sticky"
+spawn-at-startup "swayidle"
 
 hotkey-overlay {
     skip-at-startup

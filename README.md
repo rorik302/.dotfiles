@@ -31,6 +31,8 @@
 - glow
 - bluetui
 - telegram-desktop
+- swayidle
+- python-click
 
 
 ## Aur packages
