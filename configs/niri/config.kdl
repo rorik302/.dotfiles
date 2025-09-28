@@ -14,6 +14,12 @@ cursor {
   hide-when-typing
 }
 
+gestures {
+  hot-corners {
+    off
+  }
+}
+
 output "DP-1" {
     mode "1920x1080@165.000"
 }
