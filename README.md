@@ -35,6 +35,7 @@
 - python-click
 - noto-fonts-emoji
 - noto-fonts-cjk
+- uv
 
 ## Aur packages
 - wl-kbptr

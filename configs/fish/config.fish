@@ -16,3 +16,6 @@ if status is-interactive
   alias ls "eza --color=always --icons --long --all --group-directories-first --header --git --git-repos --total-size"
   alias tree "eza --tree --color=always --icons --long --all --group-directories-first --header --git --git-repos --total-size"
 end
+
+# uv
+fish_add_path "/home/rorik/.local/bin"
