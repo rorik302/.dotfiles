@@ -36,6 +36,7 @@
 - noto-fonts-emoji
 - noto-fonts-cjk
 - uv
+- duf
 
 ## Aur packages
 - wl-kbptr
