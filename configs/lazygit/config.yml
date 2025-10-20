@@ -3,6 +3,4 @@ gui:
 
 git:
   paging:
-    pager: "delta"
-
-confirmOnQuit: true
+    pager: delta --paging=never
