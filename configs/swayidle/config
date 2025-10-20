@@ -1,1 +1,3 @@
-timeout 120 "python ~/.config/scripts/brightness_timeout_idle.py --brightness 0 --contrast 20" resume "python ~/.config/scripts/brightness_restore.py"
+timeout 180 "python ~/.config/scripts/brightness_timeout_idle.py --brightness 0" resume "python ~/.config/scripts/brightness_restore.py"
+
+timeout 600 "ddcutil setvcp 12 0 -b 6 --skip-ddc-checks" resume "ddcutil setvcp 12 50 -b 6 --skip-ddc-checks"
