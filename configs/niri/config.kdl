@@ -27,6 +27,7 @@ output "DP-1" {
 layout {
     gaps 8
 
+    always-center-single-column
     center-focused-column "on-overflow"
 
     preset-column-widths {
@@ -76,7 +77,8 @@ window-rule {
 }
 
 window-rule {
-    match title=r#"^(.* - YouTube|Сериал.*смотреть онлайн.*|.*\| Tape Operator)$"#
+    match title=r#"^.* - YouTube$|^Сериал.*смотреть онлайн.*$|^.*\| Tape Operator$"#
+    exclude app-id="Yandex-browser"
 
     open-floating true
     open-focused false
@@ -84,6 +86,11 @@ window-rule {
     default-column-width { proportion 0.3; }
     default-window-height { proportion 0.3; }
     default-floating-position x=0 y=0 relative-to="bottom-right"
+}
+window-rule {
+    match app-id="Microsoft Windows"
+
+    opacity 1.0
 }
 
 binds {
@@ -141,8 +148,6 @@ binds {
 
     Mod+BracketLeft  { consume-or-expel-window-left; }
     Mod+BracketRight { consume-or-expel-window-right; }
-    Mod+Comma  { consume-window-into-column; }
-    Mod+Period { expel-window-from-column; }
 
     Mod+R { switch-preset-column-width; }
     Mod+Shift+R { switch-preset-window-height; }
