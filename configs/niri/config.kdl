@@ -2,6 +2,7 @@ input {
     keyboard {
         xkb {
             layout "us, ru"
+            options "grp:ctrls_toggle"
         }
 
         numlock
@@ -94,9 +95,6 @@ window-rule {
 }
 
 binds {
-    Shift+Ctrl+1 { spawn-sh "niri msg action switch-layout 0"; }
-    Shift+Ctrl+2 { spawn-sh "niri msg action switch-layout 1"; }
-
     Mod+Slash { show-hotkey-overlay; }
 
     Mod+T hotkey-overlay-title="Open a Terminal: Ghostty" { spawn "ghostty"; }
