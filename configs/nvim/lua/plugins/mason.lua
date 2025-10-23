@@ -18,6 +18,18 @@ return {
 				"basedpyright",
 				"ruff",
 				"mypy",
+				"black",
+
+				"stylelint",
+				"hadolint",
+				"htmlhint",
+				"eslint_d",
+				"jsonlint",
+				"markdownlint",
+				"tombi",
+				"yamllint",
+
+				"prettier",
 			},
 		})
 	end,
