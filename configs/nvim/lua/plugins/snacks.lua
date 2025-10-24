@@ -23,7 +23,7 @@ return {
 		},
 		input = { enabled = true },
 		notifier = { enabled = true, timeout = 3000 },
-		picker = { enabled = true },
+		picker = { enabled = true, include = { "*" } },
 		terminal = {
 			win = {
 				keys = {
