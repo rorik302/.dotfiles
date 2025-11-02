@@ -2,9 +2,9 @@ require("projects"):setup({
 	save = {
 		method = "lua",
 	},
-	last = {
-		load_after_start = true,
-	},
+	-- last = {
+	-- 	load_after_start = true,
+	-- },
 })
 
 th.git = th.git or {}
@@ -31,6 +31,8 @@ require("searchjump"):setup({
 })
 
 require("fs-usage"):setup()
+
+require("recycle-bin").setup()
 
 require("yatline"):setup({
 	show_background = false,

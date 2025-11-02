@@ -1,9 +1,4 @@
 [[plugin.deps]]
-use = "yazi-rs/plugins:mount"
-rev = "d7588f6"
-hash = "e1de3054c0d1a2d8dc6f007eadc0fa31"
-
-[[plugin.deps]]
 use = "MasouShizuka/projects"
 rev = "a5e33db"
 hash = "3de26efded35814ba3e55e28f1c389a4"
@@ -27,11 +22,6 @@ hash = "a94dcbe9266512806c677138e8591ddb"
 use = "boydaihungst/restore"
 rev = "dc40509"
 hash = "e7e377f9b1bbaca4a2e5d9ec9709ac4d"
-
-[[plugin.deps]]
-use = "boydaihungst/gvfs"
-rev = "b58c305"
-hash = "92dc8bdc3d9cbb36e03111b4cad231fc"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:git"
@@ -62,6 +52,16 @@ hash = "4c19faa86a2326ef1054644133568c8e"
 use = "imsi32/yatline"
 rev = "88bd1c5"
 hash = "981acbe9b758b1af3a8154c932bb936d"
+
+[[plugin.deps]]
+use = "uhs-robert/recycle-bin"
+rev = "8bb6286"
+hash = "f8d05a771c1d18c87f5558cbd4ae27fa"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:mount"
+rev = "8f1d971"
+hash = "4fccaaf10c36dc2466e2438a386ff017"
 
 [[flavor.deps]]
 use = "dangooddd/kanagawa"

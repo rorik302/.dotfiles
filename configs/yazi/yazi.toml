@@ -28,4 +28,4 @@ run = 'piper --format=url -- tar tf "$1"'
 
 [[plugin.prepend_previewers]]
 name = "*/"
-run  = 'piper -- eza -TL=3 --color=always --icons=always --group-directories-first --no-quotes "$1"'
+run = 'piper -- eza -TL=3 --color=always --icons=always --group-directories-first --no-quotes "$1"'
