@@ -5,6 +5,9 @@ input {
             options "grp:ctrls_toggle"
         }
 
+        repeat-delay 300
+        repeat-rate 80
+
         numlock
     }
 
@@ -57,6 +60,7 @@ layout {
 spawn-at-startup "swww-daemon"
 spawn-at-startup "niri-float-sticky"
 spawn-at-startup "swayidle"
+spawn-sh-at-startup "llama-swap -config ~/.config/llama-swap/config.yaml"
 
 hotkey-overlay {
     skip-at-startup
