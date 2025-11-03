@@ -31,3 +31,4 @@ vim.opt.undofile = true
 vim.opt.updatetime = 50
 vim.opt.winborder = "rounded"
 vim.opt.writebackup = false
+vim.opt.wrap = false

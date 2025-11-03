@@ -40,3 +40,15 @@ vim.api.nvim_create_autocmd("FileType", {
 		end)
 	end,
 })
+
+vim.api.nvim_create_autocmd("BufWinLeave", {
+	pattern = { "*.*" },
+	command = "mkview",
+	desc = "Save folds when closing file",
+})
+
+vim.api.nvim_create_autocmd("BufWinEnter", {
+	pattern = { "*.*" },
+	command = "silent! loadview",
+	desc = "Load folds when opening file",
+})

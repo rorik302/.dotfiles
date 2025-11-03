@@ -13,7 +13,16 @@ return {
 		basedpyright = {
 			analysis = {
 				autoSearchPath = true,
+				autoImportCompletions = true,
+				useLibraryCodeForTypes = true,
 				typeCheckingMode = "standard",
+			},
+			inlayHints = {
+				variableTypes = true,
+				functionReturnTypes = true,
+				callArgumentNames = false,
+				parameterTypes = false,
+				genericTypes = false,
 			},
 		},
 	},

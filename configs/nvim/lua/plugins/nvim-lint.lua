@@ -17,7 +17,7 @@ return {
 			yaml = { "yamllint" },
 		}
 
-		vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+		vim.api.nvim_create_autocmd({ "InsertLeave", "BufRead", "BufWritePost" }, {
 			callback = function()
 				require("lint").try_lint()
 			end,
