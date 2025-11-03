@@ -97,6 +97,11 @@ window-rule {
 
     opacity 1.0
 }
+window-rule {
+  match app-id="Yandex-browser"
+
+  open-maximized true
+}
 
 binds {
     Mod+Slash { show-hotkey-overlay; }
