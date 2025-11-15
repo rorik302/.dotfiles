@@ -12,7 +12,7 @@ return {
 			python = { "ruff", "mypy" },
 			sass = { "stylelint" },
 			scss = { "stylelint" },
-			toml = { "tombi" },
+			-- toml = { "tombi" }, -- почему-то выдает ошибку, что линтер не найден
 			typescript = { "eslint_d" },
 			yaml = { "yamllint" },
 		}
