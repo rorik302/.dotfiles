@@ -37,15 +37,20 @@
 - noto-fonts-cjk
 - uv
 - duf
+- wlsunset
+- capitaine-cursors
 
 ## Aur packages
+
 - wl-kbptr
 - yandex-browser
 - waypaper
 - niri-float-sticky
 - nerd-fonts-inter
+- noctalia-shell
 
 ## Yazi plugins/flavors
+
 - mount - ya pkg add yazi-rs/plugins:mount
 - chmod - ya pkg add yazi-rs/plugins:chmod
 - git - ya pkg add yazi-rs/plugins:git
