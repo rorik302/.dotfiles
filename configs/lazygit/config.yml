@@ -1,6 +1,5 @@
 gui:
   language: "en"
-
 git:
-  paging:
-    pager: delta --paging=never
+  pagers:
+    - pager: delta --paging=never
