@@ -1,8 +1,10 @@
+environment {}
+
 input {
     keyboard {
         xkb {
             layout "us, ru"
-            options "grp:ctrls_toggle"
+            options "grp:alt_shift_toggle"
         }
 
         repeat-delay 300
@@ -15,6 +17,7 @@ input {
 }
 
 cursor {
+  xcursor-theme "capitaine-cursors-light"
   hide-when-typing
 }
 
@@ -44,8 +47,7 @@ layout {
 
     focus-ring {
         width 2
-        active-color "#7fc8ff"
-        inactive-color "#505050"
+        active-color "#ffcc66"
     }
 
     shadow {
@@ -57,10 +59,10 @@ layout {
     }
 }
 
+spawn-at-startup "qs" "-c" "noctalia-shell"
 spawn-at-startup "swww-daemon"
 spawn-at-startup "niri-float-sticky"
 spawn-at-startup "swayidle"
-spawn-sh-at-startup "llama-swap -config ~/.config/llama-swap/config.yaml"
 
 hotkey-overlay {
     skip-at-startup
@@ -77,8 +79,6 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 window-rule {
     geometry-corner-radius 4
     clip-to-geometry true
-
-    opacity 0.9
 }
 
 window-rule {
@@ -87,38 +87,47 @@ window-rule {
 
     open-floating true
     open-focused false
-    opacity 1.0
     default-column-width { proportion 0.3; }
     default-window-height { proportion 0.3; }
     default-floating-position x=0 y=0 relative-to="bottom-right"
-}
-window-rule {
-    match app-id="Microsoft Windows"
-
-    opacity 1.0
 }
 window-rule {
   match app-id="Yandex-browser"
 
   open-maximized true
 }
+window-rule {
+  match app-id="com.mitchellh.ghostty" is-active=true
+
+  opacity 0.85
+}
+window-rule {
+  match app-id="com.mitchellh.ghostty" is-active=false
+
+  opacity 0.9
+}
 
 binds {
     Mod+Slash { show-hotkey-overlay; }
 
     Mod+T hotkey-overlay-title="Open a Terminal: Ghostty" { spawn "ghostty"; }
-    Mod+A hotkey-overlay-title="Run an Application: rofi" { spawn "rofi" "-modes" "drun,run" "-show"; }
+    Mod+A hotkey-overlay-title="App Launcher" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "toggle"; }
     Mod+B hotkey-overlay-title="Open browser: Yandex" { spawn "yandex-browser-stable"; }
     Mod+Shift+B hotkey-overlay-title="Open browser: Yandex (Incognito)" { spawn "yandex-browser-stable" "--incognito"; }
     Mod+G hotkey-overlay-title="Toggle wl-kbptr" { spawn "wl-kbptr"; }
+    Mod+Ctrl+Shift+Q hotkey-overlay-title="Restart Quickshell" { spawn-sh "killall -9 qs; qs -c noctalia-shell"; }
 
+    Mod+C hotkey-overlay-title="Clipboard History" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "clipboard";}
+
+    XF86Tools allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "brightness" "increase"; }
+    XF86Launch5 allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "brightness" "decrease"; }
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
     XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
     XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
 
-    XF86MonBrightnessUp allow-when-locked=true { spawn-sh "ddcutil setvcp 10 + 10 -b 6 --skip-ddc-checks"; }
-    XF86MonBrightnessDown allow-when-locked=true { spawn-sh "ddcutil setvcp 10 - 10 -b 6 --skip-ddc-checks"; }
+    // XF86MonBrightnessUp allow-when-locked=true { spawn-sh "ddcutil setvcp 10 + 10 -b 6 --skip-ddc-checks"; }
+    // XF86MonBrightnessDown allow-when-locked=true { spawn-sh "ddcutil setvcp 10 - 10 -b 6 --skip-ddc-checks"; }
 
     Mod+O repeat=false { toggle-overview; }
 
@@ -164,7 +173,7 @@ binds {
     Mod+Shift+F { fullscreen-window; }
     Mod+Ctrl+F { expand-column-to-available-width; }
 
-    Mod+C { center-column; }
+    Mod+Shift+C { center-column; }
     Mod+Ctrl+C { center-visible-columns; }
 
     Mod+Shift+H { set-column-width "-5%"; }
@@ -181,10 +190,10 @@ binds {
     Ctrl+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }
 
-    Mod+Shift+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
+    // Mod+Shift+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
-    Mod+Shift+E { quit; }
-    Mod+Escape { quit; }
+    Mod+Shift+Escape { quit; }
+    Mod+Escape { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "sessionMenu" "toggle"; }
 
     Mod+Shift+P { power-off-monitors; }
 }
