@@ -1,0 +1,15 @@
+input {
+    keyboard {
+        xkb {
+            layout "us, ru"
+            options "grp:alt_shift_toggle"
+        }
+
+        repeat-delay 300
+        repeat-rate 80
+
+        numlock
+    }
+
+    warp-mouse-to-focus
+}

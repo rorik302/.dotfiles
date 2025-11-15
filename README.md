@@ -7,7 +7,6 @@
 - git-delta
 - fish
 - ghostty
-- niri
 - ly
 - yazi
 - lazygit
@@ -42,6 +41,7 @@
 
 ## Aur packages
 
+- niri-git # Пока в пакетах Arch не будет include
 - wl-kbptr
 - yandex-browser
 - waypaper
