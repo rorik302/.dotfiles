@@ -6,7 +6,7 @@ include "input.kdl"
 include "layout.kdl"
 include "output.kdl"
 include "startup.kdl"
-include "window-rules.kdl"
+include "window_rules.kdl"
 
 hotkey-overlay {
     skip-at-startup

@@ -20,11 +20,9 @@ window-rule {
 }
 window-rule {
   match app-id="com.mitchellh.ghostty" is-active=true
-
-  opacity 0.85
 }
 window-rule {
   match app-id="com.mitchellh.ghostty" is-active=false
 
-  opacity 0.9
+  opacity 0.95
 }
