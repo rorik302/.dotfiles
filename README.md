@@ -38,6 +38,7 @@
 - duf
 - wlsunset
 - capitaine-cursors
+- starship
 
 ## Aur packages
 

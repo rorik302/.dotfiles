@@ -5,6 +5,9 @@ if status is-interactive
 
   zoxide init fish | source
 
+  starship init fish | source
+  set -gx STARSHIP_CONFIG ~/.config/starship/starship.toml
+
   fzf --fish | source
   set -gx FZF_DEFAULT_COMMAND "fd --hidden --follow --color=always --exclude='**/.git/'"
   set -gx FZF_DEFAULT_OPTS "--exact --ansi --style=full --height=50% --layout=reverse --info=inline"
