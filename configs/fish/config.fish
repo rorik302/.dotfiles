@@ -16,9 +16,9 @@ if status is-interactive
   set -gx FZF_ALT_C_COMMAND $FZF_DEFAULT_COMMAND "--type=d"
   set -gx FZF_ALT_C_OPTS "--preview='eza --color=always --icons --long --all --group-directories-first --header --git --git-repos --total-size {}'"
 
-  alias ls "eza --color=always --icons --long --all --group-directories-first --header --git --git-repos --total-size"
-  alias tree "eza --tree --color=always --icons --long --all --group-directories-first --header --git --git-repos --total-size"
+  alias ls "eza --color=always --icons --long --all --group-directories-first --header --git --git-repos"
+  alias tree "eza --tree --color=always --icons --long --all --group-directories-first --header --git --git-repos"
 end
 
-# uv
 fish_add_path "/home/rorik/.local/bin"
+fish_add_path "/home/rorik/.cargo/bin"
