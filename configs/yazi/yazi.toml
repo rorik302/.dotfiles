@@ -4,28 +4,34 @@ linemode = "size"
 show_hidden = true
 scrolloff = 8
 
-[[plugin.prepend_fetchers]]
-id = "git"
-name = "*"
-run = "git"
+[plugin]
+prepend_fetchers = [
+  { id = "git", name = "*", run = "git" },
+  { id = "git", name = "*/", run = "git" }
+]
 
-[[plugin.prepend_fetchers]]
-id = "git"
-name = "*/"
-run = "git"
+prepend_preloaders = [
+  # Do not preload files in mounted locations:
+  # Environment variable won't work here.
+  # Using absolute path instead.
+  { name = "/run/user/1000/gvfs/**/*", run = "noop" },
+  # For mounted hard disk/drive
+  { name = "/run/media/USER_NAME/**/*", run = "noop" },
+]
 
-[[plugin.prepend_previewers]]
-name = "*.md"
-run = 'piper -- CLICOLOR_FORCE=1 glow -w=$w -s=dark "$1"'
+prepend_previewers = [
+  { name = "*.md", run = 'piper -- CLICOLOR_FORCE=1 glow -w=$w -s=dark "$1"' },
+  { mime = "text/*", run = 'piper -- bat -p --color=always "$1"' },
+  { name = "*.tar", run = 'piper --format=url -- tar tf "$1"' },
+  { name = "*/", run = 'piper -- eza -TL=3 --color=always --icons=always --group-directories-first --no-quotes "$1"' },
 
-[[plugin.prepend_previewers]]
-mime = "text/*"
-run = 'piper -- bat -p --color=always "$1"'
-
-[[plugin.prepend_previewers]]
-name = "*.tar"
-run = 'piper --format=url -- tar tf "$1"'
-
-[[plugin.prepend_previewers]]
-name = "*/"
-run = 'piper -- eza -TL=3 --color=always --icons=always --group-directories-first --no-quotes "$1"'
+  # Allow to preview folder.
+  { name = "*/", run = "folder" },
+  # Do not previewing files in mounted locations.
+  # Uncomment the line below to allow previewing text files.
+  # { mime = "{text/*,application/x-subrip}", run = "code" },
+  # Using absolute path.
+  { name = "/run/user/1000/gvfs/**/*", run = "noop" },
+  # For mounted hard disk/drive.
+  { name = "/run/media/USER_NAME/**/*", run = "noop" },
+]
