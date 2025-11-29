@@ -49,6 +49,7 @@
 - niri-float-sticky
 - nerd-fonts-inter
 - noctalia-shell
+- vicinae
 
 ## Yazi plugins/flavors
 
