@@ -51,4 +51,5 @@ keybind = ctrl+w=close_tab
 # custom-shader = ~/.config/ghostty/shaders/cursor_blaze.glsl
 # custom-shader = ~/.config/ghostty/shaders/cursor-trail.glsl
 # custom-shader = ~/.config/ghostty/shaders/cursor_blaze_no_trail.glsl
-custom-shader = ~/.config/ghostty/shaders/cursor_smear.glsl
+# custom-shader = ~/.config/ghostty/shaders/cursor_smear.glsl
+theme = catppuccin-frappe.conf
