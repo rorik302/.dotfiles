@@ -7,19 +7,16 @@ vim.keymap.set("n", "<leader>dd", vim.diagnostic.open_float, { desc = "Open Diag
 vim.keymap.set("n", "<leader>w", ":write<CR>", { silent = true, desc = "Nvim: Save" })
 vim.keymap.set("n", "<leader>q", ":quitall<CR>", { silent = true, desc = "Nvim: Quit" })
 
-vim.keymap.set("n", "<leader>bx", ":BufferClose<CR>", { silent = true, desc = "Buffer: Close" })
-vim.keymap.set("n", "<leader>bn", ":BufferNext<CR>", { silent = true, desc = "Buffer: Next" })
-vim.keymap.set("n", "<leader>bp", ":BufferPrevious<CR>", { silent = true, desc = "Buffer: Previous" })
-
 vim.keymap.set("n", "<C-Down>", ":resize +2<CR>", { desc = "Window: Increase horizontal", silent = true })
 vim.keymap.set("n", "<C-Up>", ":resize -2<CR>", { desc = "Window: Descrease horizontal", silent = true })
 vim.keymap.set("n", "<C-Left>", ":vertical resize -2<CR>", { desc = "Window: Descrease vertical", silent = true })
 vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>", { desc = "Window: Increase vertical", silent = true })
 
-vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Window: Move focus to the left" })
-vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Window: Move focus to the bottom" })
-vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Window: Move focus to the top" })
-vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Window: Move focus to the right" })
+vim.keymap.set({ "n", "t" }, "<C-h>", "<cmd>wincmd h<CR>", { desc = "Window: Move focus to the left" })
+vim.keymap.set({ "n", "t" }, "<C-j>", "<cmd>wincmd j<CR>", { desc = "Window: Move focus to the bottom" })
+vim.keymap.set({ "n", "t" }, "<C-k>", "<cmd>wincmd k<CR>", { desc = "Window: Move focus to the top" })
+vim.keymap.set({ "n", "t" }, "<C-l>", "<cmd>wincmd l<CR>", { desc = "Window: Move focus to the right" })
+vim.keymap.set("t", "<esc><esc>", "<C-\\><C-n>", { desc = "Terminal: Set Normal Mode" })
 
 vim.keymap.set({ "n", "v" }, "H", "^", { desc = "Cursor: Move to line start" })
 vim.keymap.set({ "n", "v" }, "L", "$", { desc = "Cursor: Move to line end" })
