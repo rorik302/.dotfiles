@@ -5,7 +5,11 @@ return {
 		local wk = require("which-key")
 
 		wk.setup({
-			preset = "helix",
+			preset = "modern",
+			win = {
+				width = { min = 0.4, max = 0.5 },
+				height = { min = 9, max = 25 },
+			},
 		})
 
 		wk.add({
@@ -16,8 +20,9 @@ return {
 			{ "<leader>g", group = "Git" },
 			{ "<leader>l", group = "LiveMD" },
 			{ "<leader>m", group = "Multicursor" },
-			{ "<leader>s", group = "TreeSJ" },
+			{ "<leader>S", group = "TreeSJ" },
 			{ "<leader>t", group = "Terminal" },
+			{ "<leader>tn", group = "Snacks: New Terminal" },
 		})
 	end,
 }

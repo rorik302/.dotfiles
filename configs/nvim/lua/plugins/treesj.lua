@@ -10,8 +10,8 @@ return {
 			use_default_keymaps = false,
 		})
 
-		vim.keymap.set("n", "<leader>st", sj.toggle, { desc = "TreeSJ: Toggle" })
-		vim.keymap.set("n", "<leader>ss", sj.split, { desc = "TreeSJ: Split" })
-		vim.keymap.set("n", "<leader>sj", sj.join, { desc = "TreeSJ: Join" })
+		vim.keymap.set("n", "<leader>St", sj.toggle, { desc = "TreeSJ: Toggle" })
+		vim.keymap.set("n", "<leader>Ss", sj.split, { desc = "TreeSJ: Split" })
+		vim.keymap.set("n", "<leader>Sj", sj.join, { desc = "TreeSJ: Join" })
 	end,
 }
