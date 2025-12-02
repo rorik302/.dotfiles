@@ -1,14 +1,13 @@
 return {
-	"Shatur/neovim-ayu",
+	"lmantw/themify.nvim",
+	lazy = false,
+	priority = 999,
 	config = function()
-		require("ayu").setup({
-			mirage = true,
+		require("themify").setup({
+			"catppuccin/nvim",
+			"gbprod/nord.nvim",
+			"JoosepAlviste/palenightfall.nvim",
+			"Shatur/neovim-ayu",
 		})
-
-		vim.cmd("colorscheme ayu-mirage")
-
-		vim.api.nvim_set_hl(0, "SnacksPickerPathHidden", { fg = "#7d7d7d" })
-		vim.api.nvim_set_hl(0, "SnacksPickerPathIgnored", { fg = "#7d7d7d" })
-		vim.api.nvim_set_hl(0, "SnacksPickerGitStatusUntracked", { link = "SnacksPickerTitle" })
 	end,
 }
